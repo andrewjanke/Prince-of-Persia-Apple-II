@@ -396,7 +396,7 @@ MainLoop
  cmp level
  beq MainLoop ;Continue until we change levels
 
- jsr yellowcheck ;copy protect!
+* jsr yellowcheck ;copy protect!
 
  jmp LoadNextLevel
 
@@ -1556,13 +1556,13 @@ flipdisk
 
 * 1st copy protection check
 
- lda redherring
- eor redherring2
- cmp #POPside1 ;passed 1st check?
- beq :1
- lda #POPside1
- sta BBundID
-  jmp attractmode
+* lda redherring
+* eor redherring2
+* cmp #POPside1 ;passed 1st check?
+* beq :1
+* lda #POPside1
+* sta BBundID
+*  jmp attractmode
 
 * Passed copy protection--continue
 
